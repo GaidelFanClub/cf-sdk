@@ -36,16 +36,16 @@ public interface ApiInterface {
     Call<BaseResponse<List<Hack>>> loadHacks(@Query("contestId") int contestId);
 
     @GET("contest.list")
-    Call<BaseResponse<List<Contest>>> loadContests(@Query("gym") boolean gym);
+    Call<BaseResponse<List<Contest>>> loadContests(@Query("gym") Boolean gym);
 
     @GET("contest.ratingChanges")
     Call<BaseResponse<List<RatingChange>>> loadRatingChanges(@Query("contestId") int contestId);
 
     @GET("contest.standings")
-    Call<BaseResponse<Standing>> loadStanding(@Query("contestId") int contestId, @Query("from") int from, @Query("handles") int handle, @Query("room") int room, @Query("showUnofficial") boolean showUnofficial);
+    Call<BaseResponse<Standing>> loadStanding(@Query("contestId") int contestId, @Query("from") Integer from, @Query("handles") String handle, @Query("room") Integer room, @Query("showUnofficial") Boolean showUnofficial);
 
     @GET("contest.status")
-    Call<BaseResponse<List<Submission>>> loadStatus(@Query("contestId") int contestId, @Query("handle") String handle, @Query("from") int from, @Query("count") int count);
+    Call<BaseResponse<List<Submission>>> loadStatus(@Query("contestId") int contestId, @Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
 
     @GET("problemset.recentStatus")
     Call<BaseResponse<List<Submission>>> loadSubmissions(@Query("count") int count);
@@ -60,19 +60,19 @@ public interface ApiInterface {
     Call<BaseResponse<List<BlogEntry>>> loadBlogEntries(@Query("onlyOnline") boolean isOnlyOnline);
 
     @GET("user.friends")
-    Call<BaseResponse<List<User>>> loadFriends(@Query("handle") String handle);
+    Call<BaseResponse<List<User>>> loadFriends(@Query("onlyOnline") Boolean onlyOnline);
 
     @GET("user.info")
     Call<BaseResponse<List<User>>> loadUser(@Query("handles") String handle);
 
     @GET("user.ratedList")
-    Call<BaseResponse<List<User>>> loadRatedList(@Query("activeOnly") String isActiveOnly);
+    Call<BaseResponse<List<User>>> loadRatedList(@Query("activeOnly") Boolean isActiveOnly);
 
     @GET("user.rating")
     Call<BaseResponse<List<RatingChange>>> loadRatingHistory(@Query("handle") String handle);
 
     @GET("user.status")
-    Call<BaseResponse<List<Submission>>> loadSubmisiions(@Query("handle") String handle, @Query("from") int from, @Query("count") int count);
+    Call<BaseResponse<List<Submission>>> loadSubmisiions(@Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
 
 
 
