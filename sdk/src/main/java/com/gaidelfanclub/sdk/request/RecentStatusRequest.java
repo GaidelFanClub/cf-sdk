@@ -12,9 +12,10 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class RecentStatusRequestBuilder extends RequestBuilder<List<Submission>> {
+public class RecentStatusRequest extends RequestBuilder<List<Submission>> {
     private int count;
-    public RecentStatusRequestBuilder(int count){
+
+    public RecentStatusRequest(int count) {
         this.count = count;
     }
 

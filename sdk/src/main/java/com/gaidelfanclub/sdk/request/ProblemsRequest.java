@@ -11,12 +11,14 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class ProblemsRequestBuilder extends RequestBuilder<Problems> {
+public class ProblemsRequest extends RequestBuilder<Problems> {
     private String[] tags;
-    public ProblemsRequestBuilder tags(String... tags){
+
+    public ProblemsRequest tags(String... tags) {
         this.tags = tags;
         return this;
     }
+
     @Override
     protected Call<BaseResponse<Problems>> call() {
         return ApiService.getInstance().loadProblems(QueryUtils.listToQuery(tags));

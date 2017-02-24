@@ -13,12 +13,13 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class InfoRequestBuilder extends RequestBuilder<List<User>> {
+public class UserInfoRequest extends RequestBuilder<List<User>> {
     private String[] handles;
 
-    public InfoRequestBuilder(String... handles){
+    public UserInfoRequest(String... handles) {
         this.handles = handles;
     }
+
     @Override
     protected Call<BaseResponse<List<User>>> call() {
         return ApiService.getInstance().loadUser(QueryUtils.listToQuery(handles));

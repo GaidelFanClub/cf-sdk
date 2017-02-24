@@ -13,13 +13,14 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class RatedListRequestBuilder extends RequestBuilder<List<User>> {
+public class RatedListRequest extends RequestBuilder<List<User>> {
     private Boolean activeOnly;
 
-    public RatedListRequestBuilder activeOnly(boolean activeOnly){
+    public RatedListRequest activeOnly(boolean activeOnly) {
         this.activeOnly = activeOnly;
         return this;
     }
+
     @Override
     protected Call<BaseResponse<List<User>>> call() {
         return ApiService.getInstance().loadRatedList(activeOnly);

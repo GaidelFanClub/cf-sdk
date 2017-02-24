@@ -12,24 +12,25 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class UserStatusRequestBuilder extends RequestBuilder<List<Submission>> {
+public class UserStatusRequest extends RequestBuilder<List<Submission>> {
     private String handle;
     private Integer from;
     private Integer count;
 
-    public UserStatusRequestBuilder(String handle){
+    public UserStatusRequest(String handle) {
         this.handle = handle;
     }
 
-    public UserStatusRequestBuilder from(int drom){
+    public UserStatusRequest from(int drom) {
         this.from = from;
         return this;
     }
 
-    public UserStatusRequestBuilder count(int count){
+    public UserStatusRequest count(int count) {
         this.count = count;
         return this;
     }
+
     @Override
     protected Call<BaseResponse<List<Submission>>> call() {
         return ApiService.getInstance().loadStatuses(handle, from, count);

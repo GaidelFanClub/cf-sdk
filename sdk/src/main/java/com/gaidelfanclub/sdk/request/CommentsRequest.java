@@ -14,10 +14,10 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class CommentsRequestBuilder extends RequestBuilder<List<Comment>> {
+public class CommentsRequest extends RequestBuilder<List<Comment>> {
     private int blogEntryId;
 
-    public CommentsRequestBuilder(int blogEntryId){
+    public CommentsRequest(int blogEntryId) {
         this.blogEntryId = blogEntryId;
     }
 

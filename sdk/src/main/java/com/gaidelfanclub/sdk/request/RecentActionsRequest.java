@@ -14,10 +14,10 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class RecentActionsRequestBuilder extends RequestBuilder<List<RecentAction>> {
+public class RecentActionsRequest extends RequestBuilder<List<RecentAction>> {
     private int maxCount;
 
-    public RecentActionsRequestBuilder(int maxCount){
+    public RecentActionsRequest(int maxCount) {
         this.maxCount = maxCount;
     }
 

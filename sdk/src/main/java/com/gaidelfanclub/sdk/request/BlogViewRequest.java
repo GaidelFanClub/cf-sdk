@@ -11,10 +11,10 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class ViewRequestBuilder extends RequestBuilder<BlogEntry> {
+public class BlogViewRequest extends RequestBuilder<BlogEntry> {
     private int blogEntryId;
 
-    public ViewRequestBuilder(int blogEntryId){
+    public BlogViewRequest(int blogEntryId) {
         this.blogEntryId = blogEntryId;
     }
 

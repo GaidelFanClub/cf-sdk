@@ -12,15 +12,15 @@ import retrofit2.Call;
  * Created by Artem on 25.02.2017.
  */
 
-public class RatingRequestBuilder extends RequestBuilder<List<RatingChange>> {
-    private String handle;
+public class RatingChangesRequest extends RequestBuilder<List<RatingChange>> {
+    private int contestId;
 
-    public RatingRequestBuilder(String handle){
-        this.handle = handle;
+    public RatingChangesRequest(int contestId) {
+        this.contestId = contestId;
     }
 
     @Override
     protected Call<BaseResponse<List<RatingChange>>> call() {
-        return ApiService.getInstance().loadRatingHistory(handle);
+        return ApiService.getInstance().loadRatingChanges(contestId);
     }
 }

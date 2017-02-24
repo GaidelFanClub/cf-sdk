@@ -7,7 +7,7 @@ import com.gaidelfanclub.sdk.utils.QueryUtils;
 
 import retrofit2.Call;
 
-public class StandingsRequestBuilder extends RequestBuilder<Standings> {
+public class StandingsRequest extends RequestBuilder<Standings> {
 
     private int contestId;
     private Integer from;
@@ -16,31 +16,31 @@ public class StandingsRequestBuilder extends RequestBuilder<Standings> {
     private Integer room;
     private Boolean showUnofficial;
 
-    public StandingsRequestBuilder(int contestId) {
+    public StandingsRequest(int contestId) {
         this.contestId = contestId;
     }
 
-    public StandingsRequestBuilder from(int from) {
+    public StandingsRequest from(int from) {
         this.from = from;
         return this;
     }
 
-    public StandingsRequestBuilder count(int count) {
+    public StandingsRequest count(int count) {
         this.count = count;
         return this;
     }
 
-    public StandingsRequestBuilder handles(String... handles) {
+    public StandingsRequest handles(String... handles) {
         this.handles = handles;
         return this;
     }
 
-    public StandingsRequestBuilder room(int room) {
+    public StandingsRequest room(int room) {
         this.room = room;
         return this;
     }
 
-    public StandingsRequestBuilder showUnofficial(boolean showUnofficial) {
+    public StandingsRequest showUnofficial(boolean showUnofficial) {
         this.showUnofficial = showUnofficial;
         return this;
     }
