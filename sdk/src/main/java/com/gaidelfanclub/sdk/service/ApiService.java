@@ -1,4 +1,4 @@
-package com.gaidelfanclub.sdk.model.service;
+package com.gaidelfanclub.sdk.service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

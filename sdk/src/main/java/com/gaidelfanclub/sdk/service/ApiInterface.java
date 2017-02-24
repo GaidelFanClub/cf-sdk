@@ -1,4 +1,4 @@
-package com.gaidelfanclub.sdk.model.service;
+package com.gaidelfanclub.sdk.service;
 
 import com.gaidelfanclub.sdk.model.BaseResponse;
 import com.gaidelfanclub.sdk.model.BlogEntry;
