@@ -3,26 +3,21 @@ package com.gaidelfanclub.sdk.service;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Artem on 23.02.2017.
- */
-
 public class ApiService {
-    private static ApiInterface apiInterface;
 
-    public static ApiInterface getApi() {
-        if (apiInterface == null) {
+    private static final String BASE_URL = "http://codeforces.com/api/";
+    private static ApiInterface instance;
+
+    public static ApiInterface getInstance() {
+        if (instance == null) {
             synchronized (ApiService.class) {
-                if (apiInterface == null) {
-                    apiInterface = createInterface();
+                if (instance == null) {
+                    instance = createInterface();
                 }
             }
         }
-        return apiInterface;
+        return instance;
     }
-
-    private static final String BASE_URL = "http://codeforces.com/api/";
-
 
     private static ApiInterface createInterface() {
         Retrofit retrofit = new Retrofit.Builder()

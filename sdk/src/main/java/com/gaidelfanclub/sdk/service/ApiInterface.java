@@ -8,7 +8,7 @@ import com.gaidelfanclub.sdk.model.Hack;
 import com.gaidelfanclub.sdk.model.Problems;
 import com.gaidelfanclub.sdk.model.RatingChange;
 import com.gaidelfanclub.sdk.model.RecentAction;
-import com.gaidelfanclub.sdk.model.Standing;
+import com.gaidelfanclub.sdk.model.Standings;
 import com.gaidelfanclub.sdk.model.Submission;
 import com.gaidelfanclub.sdk.model.User;
 
@@ -42,7 +42,7 @@ public interface ApiInterface {
     Call<BaseResponse<List<RatingChange>>> loadRatingChanges(@Query("contestId") int contestId);
 
     @GET("contest.standings")
-    Call<BaseResponse<Standing>> loadStanding(@Query("contestId") int contestId, @Query("from") Integer from, @Query("handles") String handle, @Query("room") Integer room, @Query("showUnofficial") Boolean showUnofficial);
+    Call<BaseResponse<Standings>> loadStandings(@Query("contestId") int contestId, @Query("from") Integer from, @Query("count") Integer count, @Query("handles") String handles, @Query("room") Integer room, @Query("showUnofficial") Boolean showUnofficial);
 
     @GET("contest.status")
     Call<BaseResponse<List<Submission>>> loadStatus(@Query("contestId") int contestId, @Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);

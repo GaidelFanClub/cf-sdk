@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Artem on 23.02.2017.
  */
 
-public class Standing {
+public class Standings {
     private Contest contest;
     private List<Problem> problems;
     private List<RanklistRow> rows;
