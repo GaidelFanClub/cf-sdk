@@ -6,9 +6,19 @@ package com.gaidelfanclub.sdk.model;
 
 public class BaseResponse<T> {
 
+    private static final String OK_STATUS = "OK";
+
     private String status;
     private String comment;
     private T result;
+
+    public boolean isSuccess() {
+        return OK_STATUS.equals(status);
+    }
+
+    public String getComment() {
+        return comment;
+    }
 
     public T getResult() {
         return result;
