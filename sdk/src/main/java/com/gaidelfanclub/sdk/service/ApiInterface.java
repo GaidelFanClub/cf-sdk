@@ -48,7 +48,7 @@ public interface ApiInterface {
     Call<BaseResponse<List<Submission>>> loadStatus(@Query("contestId") int contestId, @Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
 
     @GET("problemset.recentStatus")
-    Call<BaseResponse<List<Submission>>> loadSubmissions(@Query("count") int count);
+    Call<BaseResponse<List<Submission>>> loadRecentStatuses(@Query("count") int count);
 
     @GET("problemset.problems")
     Call<BaseResponse<Problems>> loadProblems(@Query("tags") String tag);
@@ -57,10 +57,10 @@ public interface ApiInterface {
     Call<BaseResponse<List<RecentAction>>> loadRecentActions(@Query("maxCount") int maxCount);
 
     @GET("user.blogEntries")
-    Call<BaseResponse<List<BlogEntry>>> loadBlogEntries(@Query("onlyOnline") boolean isOnlyOnline);
+    Call<BaseResponse<List<BlogEntry>>> loadBlogEntries(@Query("handle") String handle);
 
     @GET("user.friends")
-    Call<BaseResponse<List<User>>> loadFriends(@Query("onlyOnline") Boolean onlyOnline);
+    Call<BaseResponse<List<String>>> loadFriends(@Query("onlyOnline") Boolean onlyOnline);
 
     @GET("user.info")
     Call<BaseResponse<List<User>>> loadUser(@Query("handles") String handle);
@@ -72,7 +72,7 @@ public interface ApiInterface {
     Call<BaseResponse<List<RatingChange>>> loadRatingHistory(@Query("handle") String handle);
 
     @GET("user.status")
-    Call<BaseResponse<List<Submission>>> loadSubmisiions(@Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
+    Call<BaseResponse<List<Submission>>> loadStatuses(@Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
 
 
 
