@@ -21,7 +21,7 @@ public class UserStatusRequest extends RequestBuilder<List<Submission>> {
         this.handle = handle;
     }
 
-    public UserStatusRequest from(int drom) {
+    public UserStatusRequest from(int from) {
         this.from = from;
         return this;
     }

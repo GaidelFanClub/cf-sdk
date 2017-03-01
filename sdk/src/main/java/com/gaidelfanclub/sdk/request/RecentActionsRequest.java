@@ -1,7 +1,5 @@
 package com.gaidelfanclub.sdk.request;
 
-import android.app.Notification;
-
 import com.gaidelfanclub.sdk.model.BaseResponse;
 import com.gaidelfanclub.sdk.model.RecentAction;
 import com.gaidelfanclub.sdk.service.ApiService;

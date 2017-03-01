@@ -15,7 +15,7 @@ import retrofit2.Call;
 public class ContestListRequest extends RequestBuilder<List<Contest>> {
     private Boolean gym;
 
-    public ContestListRequest gym(boolean gum) {
+    public ContestListRequest gym(boolean gym) {
         this.gym = gym;
         return this;
     }

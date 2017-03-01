@@ -25,9 +25,8 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
 
-
     @GET("blogEntry.comments")
-    Call<BaseResponse<List<Comment>>> loadComments(@Query("blogEntryId") int blogEntryId );
+    Call<BaseResponse<List<Comment>>> loadComments(@Query("blogEntryId") int blogEntryId);
 
     @GET("blogEntryId.view")
     Call<BaseResponse<BlogEntry>> loadBlogEntry(@Query("blogEntryId") int blogEntryId);
@@ -73,11 +72,6 @@ public interface ApiInterface {
 
     @GET("user.status")
     Call<BaseResponse<List<Submission>>> loadStatuses(@Query("handle") String handle, @Query("from") Integer from, @Query("count") Integer count);
-
-
-
-
-
 
 
 }

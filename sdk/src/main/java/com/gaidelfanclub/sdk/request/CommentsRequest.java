@@ -2,9 +2,7 @@ package com.gaidelfanclub.sdk.request;
 
 import com.gaidelfanclub.sdk.model.BaseResponse;
 import com.gaidelfanclub.sdk.model.Comment;
-import com.gaidelfanclub.sdk.model.Standings;
 import com.gaidelfanclub.sdk.service.ApiService;
-import com.gaidelfanclub.sdk.utils.QueryUtils;
 
 import java.util.List;
 

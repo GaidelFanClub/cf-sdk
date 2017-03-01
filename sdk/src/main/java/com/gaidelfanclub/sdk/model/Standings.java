@@ -11,7 +11,7 @@ public class Standings {
     private List<Problem> problems;
     private List<RanklistRow> rows;
 
-    public Contest getContest(){
+    public Contest getContest() {
         return contest;
     }
 
