@@ -1,1 +1,1 @@
-include ':sdk', ':example'
+include ':cf-sdk', ':example'
